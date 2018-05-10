@@ -13,12 +13,12 @@ public Product(String name, double price, String category,int count) {
     }
 
 public void addAmount(int amount){
-        this.count+= count;
+        this.count+= amount;
 }
 public boolean isAvailable (){
 if (count>0)
-    return false;
-else return true;
+    return true;
+else return false;
 }
 
     public double getPrice() {
