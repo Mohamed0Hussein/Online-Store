@@ -21,6 +21,6 @@ double money;
         p.count-= amount;
     }
     public void deposite(double money){
-        this.money-=money;
+        this.money+=money;
     }
 }
