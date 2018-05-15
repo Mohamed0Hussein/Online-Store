@@ -5,10 +5,9 @@
  */
 package online.store;
 
-import org.junit.After;
-import org.junit.AfterClass;
+
 import org.junit.Before;
-import org.junit.BeforeClass;
+
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -21,13 +20,7 @@ public class ProductTest {
     public ProductTest() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
+   
     
     @Before
     public void setUp() {
@@ -35,10 +28,7 @@ public class ProductTest {
         
     }
     
-    @After
-    public void tearDown() {
-    }
-
+  
     /**
      * Test of addAmount method, of class Product.
      */
@@ -48,6 +38,11 @@ public class ProductTest {
         int amount = 12;
         product1.addAmount(amount);
         assertEquals("Amount didn't increase correctly", 22, product1.count);
+        System.out.println("addAmount Test");
+        
+        int amount2 = -12;
+        product1.addAmount(amount2);
+        assertEquals("Amount shouldn't change decrease", 22, product1.count);
     }
 
     /**
@@ -85,6 +80,10 @@ public class ProductTest {
         double price =75;
         product1.setPrice(price);
         assertEquals("Set price fails",75, product1.price,0);
+        
+        double price2 =-75;
+        product1.setPrice(price2);
+        assertEquals("Set price shouldn't be negative",75, product1.price,0);
         // TODO review the generated test code and remove the default call to fail.
  
     }

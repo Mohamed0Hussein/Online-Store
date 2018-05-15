@@ -13,6 +13,7 @@ public Product(String name, double price, String category,int count) {
     }
 
 public void addAmount(int amount){
+        if (amount>=0)
         this.count+= amount;
 }
 public boolean isAvailable (){
@@ -26,6 +27,7 @@ else return false;
     }
 
     public void setPrice(double price) {
+        if(price>=0)
         this.price = price;
     }
 
